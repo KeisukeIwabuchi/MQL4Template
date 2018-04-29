@@ -1,11 +1,4 @@
-//+------------------------------------------------------------------+
-//|                                            TemplateIndicator.mqh |
-//|                                 Copyright 2018, Keisuke Iwabuchi |
-//|                                        https://order-button.com/ |
-//+------------------------------------------------------------------+
-#property copyright "Copyright 2018, Keisuke Iwabuchi"
-#property link      "https://order-button.com/"
-#property version   "1.00"
+#property version   "1.03"
 #property strict
 #property indicator_separate_window
 #property indicator_buffers 2
@@ -15,7 +8,7 @@
 #property indicator_width2 1
 
 
-#include <Template_1.01.mqh>
+#include <Template_1.03.mqh>
 
 
 double Value[];
