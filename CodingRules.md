@@ -37,14 +37,105 @@ StudlyCaps記法で記述する。
 例外としてMQL4標準のイベントハンドラに関してはアッパーキャメルケースを許容する。
 
 
-## 制御構文
-### if 文
-if の後ろにスペースを1つ入れ、その後括弧を記述する。
-閉じ括弧の後ろにスペースを1つ入れ、{を記述する。
-1行で記述できる場合でも{}を省力せず、3行かけて記述する。
+## 制御構造
+### if, else if, else
+if制御については下記のようになる。
 
 ```
-if (条件式) {
-    処理
+if (条件1) {
+    // if body;
+} else if (条件2) {
+    // else if body;
+} else {
+    // else body;
 }
 ```
+
+1行で記述できる場合でも{}を省力せず、3行かけて記述する。
+
+
+### switch, case
+switch制御については下記のようになる。
+意図的に処理スルーさせる場合は「// no break」等、コメントを記述する。
+
+```
+switch (値) {
+    case: 0
+        Print("hoge");
+        break;
+    case: 1
+        Print("uga");
+        return;
+    default:
+        Print("foo");
+        break;
+}
+```
+
+
+### while, do while
+while制御については下記のようになる。
+
+```
+while (条件) {
+    // structure body
+}
+```
+
+do while制御については下記のようになる。
+
+```
+do {
+    // structure body
+} while (条件);
+```
+
+
+### for
+for制御については下記のようになる。
+
+```
+for (int i = 0; i < 10; i++) {
+    // for body
+}
+```
+
+
+##　その他
+### 関数
+関数については下記のようになる。
+
+```
+int Sum(int a, int b)
+{
+    return(a + b);
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
