@@ -1,6 +1,6 @@
 # MQL4Template
 EA・インジケーター開発のテンプレートです。  
-最新版はversion1.08
+最新版はversion1.09
   
   
   
