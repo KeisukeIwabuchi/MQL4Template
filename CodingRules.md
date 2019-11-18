@@ -3,6 +3,15 @@
 
 ## 基本
 + インデントはスペース4つとする。
++ プログラムはproperty, define, include, resource, enum, struct, class, パラメーター, 外部変数, 関数の順に記述する。
++ 関数はOnInit, OnTick(OnCalculate, OnStart), OnDeinit, OnTimer, OnChartEvent, 自作関数の順に記述する。
++ 定義済み変数はMQL5の変数を優先して使用する。
+```
+OK: _Digits
+NG: Digits
+```
++ true, falseは全て小文字で記述する。
+
 
 
 ## 命名規則
@@ -111,10 +120,30 @@ int Sum(int a, int b)
 }
 ```
 
+関数と関数の間は2行あける。
+
+```
+void Hoge()
+{
+
+}
 
 
+void Uga()
+{
+
+}
+```
 
 
+### 三項演算子
+必要に応じて三項演算子を使用して良い。  
+ただし三項演算子内に三項演算子を記述してはいけない。
+
+```
+a = (条件) ? 1 : -1; // OK
+b = (条件1) ? (条件2) ? 1 : -1 : 0; // NG
+```
 
 
 
