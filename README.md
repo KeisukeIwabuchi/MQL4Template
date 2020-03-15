@@ -1,6 +1,14 @@
 # MQL4Template
 EA・インジケーター開発のテンプレートです。  
-最新版はversion1.09
+最新版はversion1.10  
+  
+基本的な使い方としてはTemplateEA.mq4をコピペしてEAを開発してください。  
+必要な機能はTemplate_1.10.mqhから適宜コピペしてください。  
+  
+もしくはEAからTemplate_1.10.mqhを読み込んで使用します。  
+```
+#include <MQL4Template\Template_1.10.mqh>
+```
   
   
   
@@ -23,14 +31,7 @@ EA・インジケーター開発のテンプレートです。
   
   
   
-## 外部変数
-+ __Symbol -> 通貨ペア名。Symbolは関数名なので特別に__を付けた命名を行う。異なる通貨ペアへの発注に対応するため外部変数にした。
-+ __Point -> レートの最小単位。
-+ __Digits -> レートの小数点以下の桁数。
+## 外部変数(TemplateEA.mq4)
 + TradeBar -> 最後にエントリーした時点でのBarsの値。連続エントリーの制御に使用。
-+ Mult -> PointをPipsへ変換するための倍率。初期化時の算出以降、値を変更するべきではない。
-+ IsTrade -> 取引をするか否か。基本はtrueだが、取引不能なエラーが発生した場合などはfalseとなる。
-+ ObjectCount -> プログラムによって生成されたオブジェクトの総数。
-+ GMTShift -> サーバー時刻とGMT時刻の時差が何時間あるか。
 + BuyTrade -> 買い取引の許可
 + SellTrade -> 売り取引の許可
